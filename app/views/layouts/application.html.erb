@@ -47,6 +47,12 @@
 	  </div>
 	</nav>
     <div class="container">
+			<% if notice.present? %>
+				<span style="color:green;"><%= notice %></span>
+			<% end %>
+			<% if alert.present? %>
+				<span style="color:red;"><%= alert %></span>
+			<% end %>
     	<%= yield %>
     </div>
   </body>
